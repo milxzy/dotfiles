@@ -21,7 +21,15 @@ return {
           { icon = " ", key = "p", desc = "Projects", action = ":lua Snacks.picker.projects()" },
           { icon = "󰱼 ", key = "g", desc = "Find Text", action = ":lua Snacks.picker.grep()" },
           { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.picker.recent()" },
-          { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.picker.config_files()" },
+          {
+            icon = " ",
+            key = "c",
+            desc = "Config",
+            action = function()
+              require("snacks.picker").files({ cwd = vim.fn.stdpath("config") })
+            end,
+          },
+
           { icon = "󰑓 ", key = "s", desc = "Restore Session", action = ':lua require("persistence").load()' },
           {
             icon = " ",
