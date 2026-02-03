@@ -121,3 +121,7 @@ export NVM_DIR="$HOME/.nvm"
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH="$HOME/.local/bin:$PATH"
+
+# opencode
+export PATH=/home/milx/.opencode/bin:$PATH
